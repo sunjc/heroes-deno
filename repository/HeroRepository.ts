@@ -1,6 +1,6 @@
 import { Hero } from "../entity/hero.ts";
 import { EntityRepository, Repository } from "../deps.ts";
-import { Page, Pageable } from "../helper/pages.ts";
+import { Page, Pageable } from "../util/pages.ts";
 
 @EntityRepository(Hero)
 export class HeroRepository extends Repository<Hero> {

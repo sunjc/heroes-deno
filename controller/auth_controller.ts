@@ -1,7 +1,7 @@
 import {Request, required, Response} from "../deps.ts";
 import {LoginCredential} from "../interfaces/LoginCredential.ts";
 import * as authService from "../service/user_service.ts";
-import {validateRequest} from "../helper/validator.ts";
+import {validateRequest} from "../util/validator.ts";
 
 async function login({request, response}: { request: Request; response: Response }) {
     const credential = (await request.body().value) as LoginCredential;

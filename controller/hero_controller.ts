@@ -1,8 +1,8 @@
 import {lengthBetween, match, oakHelpers, required, RouterContext, Status} from "../deps.ts";
 import {deleteHeroById, findHeroesByName, getHeroById, getHeroesByPage, saveHero} from "../service/hero_service.ts";
 import {Hero} from "../entity/hero.ts";
-import {parsePageQuery} from "../helper/pages.ts";
-import {validateRequest} from "../helper/validator.ts";
+import {parsePageQuery} from "../util/pages.ts";
+import {validateRequest} from "../util/validator.ts";
 
 // get heroes
 async function getHeroes(context: RouterContext) {

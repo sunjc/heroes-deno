@@ -1,6 +1,6 @@
 import {LoginCredential} from "../interfaces/LoginCredential.ts";
 import {bcrypt, getCustomRepository, httpErrors} from "../deps.ts";
-import {makeAccessToken, makeRefreshToken} from "../helper/jwt.ts";
+import {makeAccessToken, makeRefreshToken} from "../util/jwt.ts";
 import {UserRepository} from "../repository/UserRepository.ts";
 
 export async function authenticate(credential: LoginCredential) {

@@ -1,6 +1,6 @@
 import {superoak} from "./deps.ts";
 import {app} from "./app.ts";
-import {makeAccessToken} from "./helper/jwt.ts";
+import {makeAccessToken} from "./util/jwt.ts";
 import {User} from "./entity/user.ts";
 import {Authority, AuthorityName} from "./entity/authority.ts";
 

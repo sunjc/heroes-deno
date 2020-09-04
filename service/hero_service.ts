@@ -1,6 +1,6 @@
 import {DeleteResult, getCustomRepository} from "../deps.ts";
 import {HeroRepository} from "../repository/HeroRepository.ts";
-import {Page, Pageable} from "../helper/pages.ts";
+import {Page, Pageable} from "../util/pages.ts";
 import {Hero} from "../entity/hero.ts";
 
 async function getHeroById(id: number): Promise<Hero> {

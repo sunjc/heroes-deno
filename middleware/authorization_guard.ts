@@ -1,5 +1,5 @@
 import {Context, httpErrors, Request} from "../deps.ts";
-import {getPayload} from "../helper/jwt.ts";
+import {getPayload} from "../util/jwt.ts";
 import {config} from "../config/config.ts";
 
 const ignorePaths = config.IGNORE_PATHS.split(",");
