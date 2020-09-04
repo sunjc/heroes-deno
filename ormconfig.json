@@ -1,0 +1,23 @@
+{
+  "name": "default",
+  "type": "sqlite",
+  "database": "heroes.sqlite",
+  "dropSchema": true,
+  "synchronize": true,
+  "logging": true,
+  "migrationsRun": true,
+  "entities": [
+    "entity/**/*.ts"
+  ],
+  "migrations": [
+    "migration/**/*.ts"
+  ],
+  "subscribers": [
+    "subscriber/**/*.ts"
+  ],
+  "cli": {
+    "entitiesDir": "entity",
+    "migrationsDir": "migration",
+    "subscribersDir": "subscriber"
+  }
+}
