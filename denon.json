@@ -14,6 +14,20 @@
         "read",
         "write"
       ]
+    },
+    "test": {
+      "cmd": "deno test",
+      "desc": "run all tests.",
+      "tsconfig": "tsconfig.json",
+      "log": "info",
+      "unstable": true,
+      "watch": false,
+      "allow": [
+        "env",
+        "net",
+        "read",
+        "write"
+      ]
     }
   },
 
