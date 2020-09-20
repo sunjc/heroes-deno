@@ -3,7 +3,7 @@ export {
   cyan,
   bold,
   yellow,
-} from "https://deno.land/std@0.67.0/fmt/colors.ts";
+} from "https://deno.land/std@0.70.0/fmt/colors.ts";
 export * as bcrypt from "https://deno.land/x/bcrypt@v0.2.4/mod.ts";
 export { oakCors } from "https://deno.land/x/cors@v1.2.0/mod.ts";
 export {
@@ -11,8 +11,8 @@ export {
   setExpiration,
   Jose,
   Payload,
-} from "https://deno.land/x/djwt@v1.2/create.ts";
-export { validateJwt } from "https://deno.land/x/djwt@v1.2/validate.ts";
+} from "https://deno.land/x/djwt@v1.4/create.ts";
+export { validateJwt } from "https://deno.land/x/djwt@v1.4/validate.ts";
 export { config } from "https://deno.land/x/dotenv@v0.5.0/mod.ts";
 export {
   Application,
@@ -28,7 +28,7 @@ export {
   RouterContext,
   RouteParams,
   Status,
-} from "https://deno.land/x/oak@v6.1.0/mod.ts";
+} from "https://deno.land/x/oak@v6.2.0/mod.ts";
 export {
   Column,
   ConnectionOptions,
@@ -61,12 +61,12 @@ export {
   ValidationErrors,
   ValidationOptions,
   ValidationRules,
-} from "https://deno.land/x/validasaur@v0.14.1/mod.ts";
+} from "https://deno.land/x/validasaur@v0.15.0/mod.ts";
 
 export {
   assert,
   assertEquals,
   assertThrows,
   assertThrowsAsync,
-} from "https://deno.land/std@0.67.0/testing/asserts.ts";
-export { superoak } from "https://deno.land/x/superoak@2.2.0/mod.ts";
+} from "https://deno.land/std@0.70.0/testing/asserts.ts";
+export { superoak } from "https://deno.land/x/superoak@2.3.1/mod.ts";
