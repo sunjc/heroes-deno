@@ -20,7 +20,7 @@ jobs:
 
     strategy:
       matrix:
-        deno: ["v1.4.1", "nightly"]
+        deno: ["v1.4.1"]
         os: [windows-latest, ubuntu-latest]
 
     steps:
@@ -37,3 +37,6 @@ jobs:
 
       - name: Run Tests
         run: deno test --allow-env --allow-net --allow-read --allow-write --unstable --config tsconfig.json
+      
+      - name: Run application
+        run: deno run --allow-env --allow-net --allow-read --allow-write --unstable --config tsconfig.json app.ts
