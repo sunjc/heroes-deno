@@ -2,6 +2,7 @@
    "compilerOptions": {
       "experimentalDecorators": true,
 	  "importsNotUsedAsValues": "remove",
+      "isolatedModules": false,
       "strict": false,
       "strictPropertyInitialization": false
    }
