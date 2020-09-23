@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         deno: ["v1.4.1"]
-        os: [windows-latest, ubuntu-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: Setup repo
@@ -35,3 +35,7 @@ jobs:
 
       - name: Run Tests
         run: deno test --allow-env --allow-net --allow-read --allow-write --unstable --config tsconfig.json
+      
+      - name: Run application
+        run: nohup deno run --allow-env --allow-net --allow-read --allow-write --unstable --config tsconfig.json app.ts &
+        
