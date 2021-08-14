@@ -1,4 +1,4 @@
-import {Router} from "./deps.ts";
+import {Router} from "oak";
 import {addHero, deleteHero, getHero, getHeroes, searchHeroes, updateHero} from "./controller/hero_controller.ts";
 import {login} from "./controller/auth_controller.ts";
 import {authorityGuard} from "./middleware/authority_guard.ts";

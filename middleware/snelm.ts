@@ -1,21 +1,22 @@
-import {Context, Snelm} from "../deps.ts";
+import {Context} from "oak";
+import {Snelm} from "snelm";
 
 // referrerPolicy config
 const referrerPolicyConfig = {
-    policy: 'same-origin'
+  policy: 'same-origin'
 };
 
 // hidePoweredBy config
 const hidePoweredByConfig = {
-    setTo: 'iTRunner'
+  setTo: 'iTRunner'
 };
 
 const snelm = new Snelm("oak", {
-    referrerPolicy: referrerPolicyConfig,
-    hidePoweredBy: hidePoweredByConfig
+  referrerPolicy: referrerPolicyConfig,
+  hidePoweredBy: hidePoweredByConfig
 });
 
-export async function oakSnelm(ctx: Context, next: () => Promise<void>) {
-    ctx.response = snelm.snelm(ctx.request, ctx.response);
-    await next();
+export async function oakSnelm(ctx: Context, next: () => Promise<unknown>) {
+  ctx.response = snelm.snelm(ctx.request, ctx.response);
+  await next();
 }

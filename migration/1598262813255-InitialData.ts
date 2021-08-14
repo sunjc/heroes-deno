@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner } from "../deps.ts";
+import {MigrationInterface, QueryRunner} from "typeorm";
 
 export class InitialData1598262813255 implements MigrationInterface {
   async up(queryRunner: QueryRunner): Promise<any> {

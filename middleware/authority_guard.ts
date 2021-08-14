@@ -1,31 +1,31 @@
-import {httpErrors, RouterContext, Status} from "../deps.ts";
+import {httpErrors, RouterContext, Status} from "oak";
 
 /**
  * Authority Guard Middleware
  */
-async function authorityGuard(context: RouterContext, next: () => Promise<void>, roles: string[]) {
-    context.assert(roles, Status.BadRequest);
-    context.assert(context.state.user, Status.Unauthorized);
+async function authorityGuard(context: RouterContext, next: () => Promise<unknown>, roles: string[]) {
+  context.assert(roles, Status.BadRequest);
+  context.assert(context.state.user, Status.Unauthorized);
 
-    if (hasAnyRole(context.state.user.authorities, roles)) {
-        await next();
-    } else {
-        throw new httpErrors.Forbidden();
-    }
+  if (hasAnyRole(context.state.user.authorities, roles)) {
+    await next();
+  } else {
+    throw new httpErrors.Forbidden();
+  }
 }
 
 function hasAnyRole(authorities: string[], roles: string[]) {
-    let hasRole = false;
+  let hasRole = false;
 
-    // @ts-ignore
-    for (const role of roles) {
-        if (authorities.indexOf(`ROLE_${role}`) >= 0) {
-            hasRole = true;
-            break;
-        }
+  // @ts-ignore
+  for (const role of roles) {
+    if (authorities.indexOf(`ROLE_${role}`) >= 0) {
+      hasRole = true;
+      break;
     }
+  }
 
-    return hasRole;
+  return hasRole;
 }
 
 export {authorityGuard};

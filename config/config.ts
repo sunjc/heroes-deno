@@ -1,3 +1,3 @@
-import { config as loadConfig } from "../deps.ts";
+import {config as loadConfig} from "dotenv";
 
-export const config = loadConfig({ safe: true });
+export const config = loadConfig({safe: true});

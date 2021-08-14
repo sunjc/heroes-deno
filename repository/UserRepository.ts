@@ -1,9 +1,9 @@
-import { EntityRepository, Repository } from "../deps.ts";
-import { User } from "../entity/user.ts";
+import {EntityRepository, Repository} from "typeorm";
+import {User} from "../entity/user.ts";
 
 @EntityRepository(User)
 export class UserRepository extends Repository<User> {
   findByUsername(username: string) {
-    return this.findOne({ username, enabled: true });
+    return this.findOne({username, enabled: true});
   }
 }
